@@ -4,15 +4,15 @@
 
 .cta-box{
 
-   background: rgb(232, 171, 48);
-
-    color:#fff;
+    background:#fff6e7;   /* Light Melon Orange */
 
     border-radius:30px;
 
     text-align:center;
 
     padding:80px;
+
+    border:2px solid #FFE0B2;
 
 }
 
@@ -21,6 +21,8 @@
     font-size:48px;
 
     margin-bottom:20px;
+
+    color:black;
 
 }
 
@@ -34,7 +36,7 @@
 
     margin-bottom:35px;
 
-    color:#EAEAEA;
+    color:#6D4C41;
 
 }
 
@@ -50,28 +52,66 @@
 
 }
 
+/* Primary Button */
+
+.donate-btn{
+
+    padding:16px 34px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:var(--primary);
+
+    color:var(--white);
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+.donate-btn:hover{
+
+    background:var(--primary-hover);
+
+    transform:translateY(-3px);
+
+}
+
+/* Outline Button */
+
 .volunteer-btn{
 
     padding:16px 32px;
 
     border-radius:50px;
 
-    border:2px solid #fff;
+    border:2px solid var(--primary);
 
-    background:none;
+    background:transparent;
 
-    color:#fff;
+    color:var(--primary);
 
     cursor:pointer;
 
     font-size:16px;
 
+    font-weight:600;
+
+    transition:.35s;
+
 }
 
 .volunteer-btn:hover{
 
-    background:#fff;
+    background:var(--primary);
 
-    color:#2E7D32;
+    color:var(--white);
 
 }
