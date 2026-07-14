@@ -10,6 +10,7 @@ import Events from "./Pages/Events"
 import Blogs from "./Pages/Blogs";
 import Gallery from "./Pages/Gallery";
 import Donate from "./Pages/Donate";
+import BlogDetails from "./Pages/BlogDetails";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/events" element={<Events />} />
         <Route path="/blogs" element={<Blogs/>} />
+        <Route path="/blog/:id" element={<BlogDetails />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/donate" element={<Donate />} />
         
