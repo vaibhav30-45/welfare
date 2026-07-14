@@ -55,10 +55,7 @@ const EventCard = ({ id, image, day, month, title, time, location, excerpt, isPa
 const Events = () => {
   const [activeTab, setActiveTab] = useState('upcoming');
 
-<<<<<<< HEAD
-=======
    
->>>>>>> 1489c778b1922516d4acb6b8e00a5dffac5915b5
   const upcomingEvents = [
     {
       id: 1,
