@@ -50,7 +50,7 @@ const Contact = () => {
               <div className="info-icon-box"><FaPhoneAlt /></div>
               <div className="info-text">
                 <h3>Call Us</h3>
-                <p>+91 98260 12345</p>
+                <p>+91 8359855109</p>
               </div>
             </div>
 
@@ -58,7 +58,7 @@ const Contact = () => {
               <div className="info-icon-box"><FaEnvelope /></div>
               <div className="info-text">
                 <h3>Email Us</h3>
-                <p>info@sahyogfoundation.org</p>
+                <p>Rajkumarvishwakara9575@gmail.com</p>
               </div>
             </div>
           </div>

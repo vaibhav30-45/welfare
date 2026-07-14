@@ -1,4 +1,6 @@
 import "./Hero.css";
+import { Link, NavLink } from "react-router-dom";
+import { FaBars, FaTimes } from "react-icons/fa";
 import {
   FaArrowRight,
   FaChevronDown,
@@ -33,19 +35,22 @@ const Hero = () => {
 
           <div className="hero-buttons">
 
-            <button className="donate-btn">
+            {/* <button className="donate-btn">
 
               Donate Now
 
               <FaChevronDown />
 
-            </button>
+            </button> */}
+             <Link to="/donate" className="donate-btnn">
+          Donate Now
+        </Link>
 
-            <button className="volunteer-btn">
+            {/* <button className="volunteer-btn">
 
               Become Volunteer
 
-            </button>
+            </button> */}
 
           </div>
 
