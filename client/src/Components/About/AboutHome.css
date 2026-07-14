@@ -64,7 +64,7 @@ LEFT
     position:absolute;
     bottom:40px;
     right:-25px;
-    background:#2E7D32;
+    background:var(--primary);
     color:#fff;
     padding:22px 28px;
     border-radius:18px;
@@ -163,7 +163,7 @@ ABOUT BOTTOM
     align-items:center;
     gap:12px;
     padding:17px 34px;
-    background:#2E7D32;
+    background:var(--primary);
     color:#fff;
     border:none;
     border-radius:50px;
@@ -179,7 +179,7 @@ ABOUT BOTTOM
 }
 
 .about-btn:hover{
-    background:#1B5E20;
+    background:var(--primary-hover);
     transform:translateY(-5px);
 }
 

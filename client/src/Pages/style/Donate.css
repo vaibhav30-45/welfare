@@ -131,8 +131,8 @@ Left Card
 /* Button */
 
 .donate-btn{
-    background:#2E7D32;
-    color:#fff;
+    background:var(--primary);
+    color:var(--white);
     border:none;
     padding:15px 30px;
     border-radius:10px;

@@ -71,7 +71,7 @@ const Navbar = () => {
 
         </ul>
 
-        <Link to="/donate" className="donate-btn">
+        <Link to="/donate" className="donate-btnn">
           Donate Now
         </Link>
 
