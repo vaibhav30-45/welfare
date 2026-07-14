@@ -50,7 +50,7 @@ const EventCard = ({ image, day, month, title, time, location, excerpt, isPast }
 const Events = () => {
   const [activeTab, setActiveTab] = useState('upcoming');
 
-  // इमेजेस और साइटमैप से मैच करता हुआ असली डेटा 
+   
   const upcomingEvents = [
     {
       id: 1,

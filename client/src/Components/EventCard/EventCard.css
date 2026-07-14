@@ -113,7 +113,7 @@
 
     gap:8px;
 
-    color:#2E7D32;
+    color:var(--primary);
 
     font-size:15px;
 
@@ -147,7 +147,7 @@
 
     background:none;
 
-    color:#2E7D32;
+    color:var(--primary);
 
     font-size:16px;
 

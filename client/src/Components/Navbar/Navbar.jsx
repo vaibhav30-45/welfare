@@ -1,6 +1,14 @@
 import "./Navbar.css";
 import { Link, NavLink } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
+import {
+  FaPhoneAlt,
+  FaEnvelope,
+  FaMapMarkerAlt,
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+} from "react-icons/fa";
 import { useState } from "react";
 import logo from "../../assets/logo.png";
 
@@ -10,79 +18,123 @@ const Navbar = () => {
   const closeMenu = () => setMenuOpen(false);
 
   return (
-    <header className="navbar-wrapper">
+    <header>
 
-      <nav className="navbar container">
+      {/* Top Bar */}
 
-        <Link to="/" className="logo">
+      <div className="topba">
 
-          <img src={logo} alt="Sahyog Foundation" />
+        <div className="topbar-lef">
 
-          <div className="logo-text">
-            <h3>SAHYOG</h3>
-            <span>Welfare Foundation</span>
-          </div>
+          <span>
+            <FaPhoneAlt /> +91 8359855109
+          </span>
 
-        </Link>
+          <span>
+            <FaEnvelope /> Rajkumarvishwakara9575@gmail.com
+          </span>
 
-        <ul className={menuOpen ? "nav-links active" : "nav-links"}>
+          <span>
+            <FaMapMarkerAlt /> Bhopal, Madhya Pradesh
+          </span>
 
-          <li>
-            <NavLink to="/" onClick={closeMenu}>
-              Home
-            </NavLink>
-          </li>
+        </div>
 
-          <li>
-            <NavLink to="/about" onClick={closeMenu}>
-              About Us
-            </NavLink>
-          </li>
+        <div className="topbar-righ">
 
-          <li>
-            <NavLink to="/programs" onClick={closeMenu}>
-              Programs
-            </NavLink>
-          </li>
+          <a href="#">
+            <FaFacebookF />
+          </a>
 
-          <li>
-            <NavLink to="/events" onClick={closeMenu}>
-              Events
-            </NavLink>
-          </li>
+          <a href="#">
+            <FaInstagram />
+          </a>
 
-          <li>
-            <NavLink to="/gallery" onClick={closeMenu}>
-              Gallery
-            </NavLink>
-          </li>
+          <a href="#">
+            <FaLinkedinIn />
+          </a>
 
-          <li>
-            <NavLink to="/blogs" onClick={closeMenu}>
-              Blog
-            </NavLink>
-          </li>
+        </div>
 
-          <li>
-            <NavLink to="/contact" onClick={closeMenu}>
-              Contact
-            </NavLink>
-          </li>
+      </div>
 
-        </ul>
+      {/* Navbar */}
 
-        <Link to="/donate" className="donate-btnn">
-          Donate Now
-        </Link>
+      <div className="navbar-wrapper">
 
-        <button
-          className="menu-btn"
-          onClick={() => setMenuOpen(!menuOpen)}
-        >
-          {menuOpen ? <FaTimes /> : <FaBars />}
-        </button>
+        <nav className="navbar">
 
-      </nav>
+          <Link to="/" className="logo">
+
+            <img src={logo} alt="Sahyog Foundation" />
+
+            <div className="logo-text">
+              <h3>SAHYOG</h3>
+              <span>Welfare Foundation</span>
+            </div>
+
+          </Link>
+
+          <ul className={menuOpen ? "nav-links active" : "nav-links"}>
+
+            <li>
+              <NavLink to="/" onClick={closeMenu}>
+                Home
+              </NavLink>
+            </li>
+
+            <li>
+              <NavLink to="/about" onClick={closeMenu}>
+                About Us
+              </NavLink>
+            </li>
+
+            <li>
+              <NavLink to="/programs" onClick={closeMenu}>
+                Programs
+              </NavLink>
+            </li>
+
+            <li>
+              <NavLink to="/events" onClick={closeMenu}>
+                Events
+              </NavLink>
+            </li>
+
+            <li>
+              <NavLink to="/gallery" onClick={closeMenu}>
+                Gallery
+              </NavLink>
+            </li>
+
+            <li>
+              <NavLink to="/blogs" onClick={closeMenu}>
+                Blog
+              </NavLink>
+            </li>
+
+            <li>
+              <NavLink to="/contact" onClick={closeMenu}>
+                Contact
+              </NavLink>
+            </li>
+
+          </ul>
+
+          <Link to="/donate" className="donate-btnn">
+            Donate Now
+          </Link>
+
+          <button
+            className="menu-btn"
+            onClick={() => setMenuOpen(!menuOpen)}
+          >
+            {menuOpen ? <FaTimes /> : <FaBars />}
+          </button>
+
+        </nav>
+
+      </div>
 
     </header>
   );

@@ -1,6 +1,7 @@
 import "./CTA.css";
 import { FaArrowRight } from "react-icons/fa";
-
+import { Link, NavLink } from "react-router-dom";
+import { FaBars, FaTimes } from "react-icons/fa";
 const CTA = () => {
   return (
     <section className="cta-section">
@@ -20,14 +21,12 @@ const CTA = () => {
 
           <div className="cta-buttons">
 
-            <button className="donate-btn">
-              Donate Now
-              <FaArrowRight/>
-            </button>
-
-            <button className="volunteer-btn">
+              <Link to="/donate" className="donate-btnn">
+          Donate Now
+        </Link>
+            {/* <button className="volunteer-btn">
               Become Volunteer
-            </button>
+            </button> */}
 
           </div>
 

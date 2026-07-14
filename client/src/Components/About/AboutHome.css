@@ -99,7 +99,7 @@ RIGHT
 
 .section-tag{
     display:inline-block;
-    color:#2E7D32;
+    color:var(--primary);
     font-size:15px;
     font-weight:600;
     letter-spacing:2px;
@@ -142,7 +142,7 @@ FEATURES
 }
 
 .feature svg{
-    color:#2E7D32;
+    color:var(--primary);
     font-size:18px;
     flex-shrink:0;
 }

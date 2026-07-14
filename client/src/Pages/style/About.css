@@ -161,7 +161,7 @@ Story
 
 .story-item svg{
 
-    color:#43a047;
+    color:var(--primary);
 
     font-size:18px;
 

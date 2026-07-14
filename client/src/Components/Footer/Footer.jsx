@@ -10,7 +10,7 @@ import {
   FaArrowRight,
 } from "react-icons/fa";
 
-import logo from "../../assets/education.jpeg";
+import logo from "../../assets/logo.png";
 
 const Footer = () => {
   return (
@@ -116,7 +116,7 @@ const Footer = () => {
 
               <FaMapMarkerAlt />
 
-              <span>Indore, Madhya Pradesh, India</span>
+              <span>Bhopal, Madhya Pradesh, India</span>
 
             </div>
 
@@ -124,7 +124,7 @@ const Footer = () => {
 
               <FaPhoneAlt />
 
-              <span>+91 9876543210</span>
+              <span>+91 8359855109</span>
 
             </div>
 
@@ -132,7 +132,7 @@ const Footer = () => {
 
               <FaEnvelope />
 
-              <span>info@sahyogfoundation.org</span>
+              <span>Rajkumarvishwakara9575@gmail.com</span>
 
             </div>
 

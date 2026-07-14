@@ -31,7 +31,7 @@
 
 .quote{
 
-    color:#2E7D32;
+    color:var(--primary);
 
     font-size:42px;
 

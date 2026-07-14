@@ -191,7 +191,7 @@
 }
 
 .contact-submit-btn:hover {
-  background-color: #15803d;
+  background-color: var(--primary-hover);
 }
 
 /* Google Map Container Box */
