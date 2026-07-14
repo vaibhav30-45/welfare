@@ -26,7 +26,7 @@ body{
 
 .navbar{
 
-    background:#fff;
+   background:var(--white);
 
     height:82px;
 
@@ -58,9 +58,9 @@ body{
 
 .logo img{
 
-    width:54px;
+    width:80px;
 
-    height:54px;
+    height:80px;
 
     object-fit:contain;
 
@@ -68,7 +68,7 @@ body{
 
 .logo-text h3{
 
-    color:#2E7D32;
+     color:var(--secondary);
 
     font-size:24px;
 
@@ -82,7 +82,7 @@ body{
 
     font-size:12px;
 
-    color:#777;
+     color:var(--text);
 
 }
 
@@ -114,7 +114,7 @@ body{
 
 .nav-links a:hover{
 
-    color:#2E7D32;
+     color:var(--primary);
 
 }
 
@@ -132,7 +132,7 @@ body{
 
     height:2px;
 
-    background:#2E7D32;
+    background:var(--primary);
 
     transition:.35s;
 
@@ -147,15 +147,14 @@ body{
 
 .nav-links .active{
 
-    color:#2E7D32;
+    color:var(--primary);
 
 }
 
 .donate-btn{
 
-    background:#2E7D32;
-
-    color:#fff;
+   background:var(--secondary);
+    color:var(--white);
 
     text-decoration:none;
 
@@ -173,7 +172,7 @@ body{
 
 .donate-btn:hover{
 
-    background:#1B5E20;
+    background:var(--secondary-hover);
 
     transform:translateY(-3px);
 

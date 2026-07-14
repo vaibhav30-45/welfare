@@ -3,3 +3,27 @@ body html {
   padding:0;
   width:100%;
 }
+:root{
+
+  /* Brand Colors */
+
+  --primary: #F5821F;
+  --primary-hover: #E56F00;
+
+  --secondary: #138A36;
+  --secondary-hover: #0F6B2B;
+
+  --light-green: #A6CE39;
+  --blue: #6EC1D4;
+
+  --white: #FFFFFF;
+
+  --bg: #F7FAF8;
+
+  --text: #222222;
+
+  --text-light: #666666;
+
+  --border: #E5E7EB;
+
+}
