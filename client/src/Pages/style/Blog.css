@@ -1,0 +1,219 @@
+/* --- VARIABLES --- */
+:root {
+  --primary-color: #2e6f40;      /* NGO Dark Green */
+  --primary-hover: #1e4a2b;
+  --bg-light: #fbfdfb;
+  --card-bg: #ffffff;
+  --text-dark: #222222;
+  --text-muted: #666666;
+  --border-color: #e5e9e6;
+  --shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* --- BASE RESET --- */
+.blog-page-wrapper * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.blog-page-wrapper {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-muted);
+}
+
+.blog-content-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: clamp(30px, 5vw, 60px) 20px;
+}
+
+/* --- BANNER SECTION --- */
+.blog-banner {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), 
+                    url('https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?q=80&w=1200'); /* Book/Writing background to match image vibe */
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: clamp(60px, 8vw, 90px) 20px;
+}
+
+.blog-banner h1 {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.blog-breadcrumb {
+  font-size: clamp(0.85rem, 1.8vw, 1rem);
+  opacity: 0.9;
+}
+
+.blog-crumb-home { opacity: 0.7; }
+.blog-crumb-current { font-weight: 600; }
+
+/* --- RESPONSIVE BLOG GRID LAYOUT --- */
+.blog-grid {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+/* --- BLOG CARD --- */
+.blog-card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition);
+}
+
+.blog-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(46, 111, 64, 0.1);
+}
+
+.blog-card-image {
+  position: relative;
+  width: 100%;
+  padding-top: 62.5%; 
+  background-color: #f0f0f0;
+  overflow: hidden;
+}
+
+.blog-card-image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.blog-card:hover .blog-card-image img {
+  scale: 1.05; 
+}
+
+/* CARD INNER CONTENT */
+.blog-card-content {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; 
+}
+
+.blog-card-title {
+  font-size: 1.25rem;
+  color: var(--text-dark);
+  font-weight: 600;
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.blog-card-excerpt {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+  
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* METADATA (DATE & AUTHOR) */
+.blog-card-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: #888888;
+  margin-top: auto; 
+  margin-bottom: 15px;
+}
+
+.blog-meta-author {
+  color: var(--text-dark);
+  font-weight: 500;
+}
+
+/* BUTTON */
+.blog-readmore-btn {
+  font-size: 0.95rem;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  transition: var(--transition);
+}
+
+.blog-readmore-btn:hover {
+  color: var(--primary-hover);
+  letter-spacing: 0.5px; 
+}
+
+/* --- PAGINATION STYLES --- */
+.blog-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.page-num, .page-next {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  color: var(--text-dark);
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.page-num:hover, .page-next:hover {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+  background: #f4faf5;
+}
+
+.page-num.active {
+  background-color: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+}
+
+/* --- MOBILE SPECIFIC FIXES --- */
+@media (max-width: 480px) {
+  .blog-grid {
+    grid-template-columns: 1fr; 
+    gap: 20px;
+  }
+  
+  .blog-card-content {
+    padding: 18px;
+  }
+  
+  .blog-pagination {
+    gap: 6px;
+  }
+  
+  .page-num, .page-next {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+}

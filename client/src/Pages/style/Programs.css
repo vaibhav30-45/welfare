@@ -1,0 +1,214 @@
+/* ===========================
+   PROGRAM PAGE
+=========================== */
+
+.program-page{
+    padding:80px 0;
+    background:#f8faf8;
+}
+
+.container{
+    width:100%;
+    /* max-width:1200px; */
+    margin:auto;
+}
+
+/* ===========================
+   BANNER
+=========================== */
+
+.program-banner{
+    position:relative;
+    width:100%;
+    /* max-width:1200px; */
+    height:300px;
+    margin:0 auto;
+   
+    overflow:hidden;
+}
+
+.program-banner img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.banner-overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.45);
+}
+
+.banner-content{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    color:#fff;
+    text-align:center;
+    z-index:5;
+}
+
+.banner-content h1{
+    font-size:42px;
+    margin-bottom:12px;
+    font-weight:700;
+}
+
+.banner-content p{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:8px;
+    font-size:15px;
+}
+
+/* ===========================
+   TABS
+=========================== */
+
+.program-tabs{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+    margin-bottom:45px;
+}
+
+.program-tabs button{
+    border:none;
+    background:#efefef;
+    padding:12px 22px;
+    border-radius:30px;
+    cursor:pointer;
+    transition:.3s;
+    font-size:15px;
+}
+
+.program-tabs button:hover{
+    background:#2E7D32;
+    color:#fff;
+}
+
+.program-tabs .active{
+    background:#2E7D32;
+    color:#fff;
+}
+
+/* ===========================
+   GRID
+=========================== */
+
+.program-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+/* ===========================
+   CARD
+=========================== */
+
+.program-card{
+    background:#fff;
+    border-radius:16px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.35s;
+}
+
+.program-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 20px 40px rgba(0,0,0,.12);
+}
+
+.program-image{
+    overflow:hidden;
+}
+
+.program-image img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    transition:.4s;
+}
+
+.program-card:hover img{
+    transform:scale(1.08);
+}
+
+.program-content{
+    padding:22px;
+}
+
+.program-content h3{
+    font-size:23px;
+    margin-bottom:12px;
+    color:#222;
+}
+
+.program-content p{
+    color:#666;
+    line-height:1.7;
+    margin-bottom:20px;
+}
+
+.program-content button{
+    border:none;
+    background:none;
+    color:#2E7D32;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    cursor:pointer;
+    font-weight:600;
+}
+
+.program-content button svg{
+    transition:.3s;
+}
+
+.program-content button:hover svg{
+    transform:translateX(6px);
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:992px){
+
+.program-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media(max-width:768px){
+
+.program-banner{
+height:180px;
+}
+
+.banner-content h1{
+font-size:30px;
+}
+
+.program-grid{
+grid-template-columns:1fr;
+}
+
+.program-tabs{
+justify-content:flex-start;
+overflow-x:auto;
+}
+
+.program-tabs::-webkit-scrollbar{
+display:none;
+}
+
+.program-tabs button{
+white-space:nowrap;
+}
+
+}
