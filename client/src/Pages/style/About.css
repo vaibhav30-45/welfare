@@ -293,7 +293,7 @@ Mission
 .journey-year{
     font-size:24px;
     font-weight:700;
-    color:#2E7D32;
+    color:var(--primary);
     display:block;
     margin-bottom:18px;
 }
@@ -301,7 +301,7 @@ Mission
 .journey-dot{
     width:24px;
     height:24px;
-    background:#2E7D32;
+    background:var(--primary);
     border-radius:50%;
     margin:0 auto 22px;
     border:6px solid #ffffff;

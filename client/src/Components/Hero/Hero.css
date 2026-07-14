@@ -6,7 +6,7 @@
   
   overflow: hidden;
 
-  background: url("../../assets/banner.png") center center/cover no-repeat;
+  background: url("../../assets/bg-image.jpeg") center center/cover no-repeat;
 
   display: flex;
   align-items: center;
@@ -18,10 +18,10 @@
 
   background: linear-gradient(
     90deg,
-    rgba(18, 45, 17, 0.88) 0%,
-    rgba(18, 45, 17, 0.75) 35%,
-    rgba(18, 45, 17, 0.35) 60%,
-    rgba(18, 45, 17, 0.05) 100%
+    rgba(45, 43, 17, 0.88) 0%,
+    rgba(45, 43, 17, 0.75) 35%,
+    rgba(45, 39, 17, 0.35) 60%,
+    rgba(45, 38, 17, 0.05) 100%
   );
 
   z-index: 1;

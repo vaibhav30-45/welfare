@@ -7,7 +7,7 @@
 
 /* Hero Section Styling */
 .contact-hero {
-  background-color: #064e3b; /* Deep Green color matching your UI */
+  background-color: rgb(235, 213, 192); /* Deep Green color matching your UI */
   color: #ffffff;
   text-align: center;
   padding: 60px 20px;
@@ -178,7 +178,7 @@
 }
 
 .contact-submit-btn {
-  background-color: #16a34a; /* UI Design ka Light Green button */
+  background-color: var(--primary); /* UI Design ka Light Green button */
   color: #ffffff;
   border: none;
   padding: 14px;
