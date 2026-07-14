@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom'
 import '../Pages/style/Blog.css';
 
 // 1. Blog Banner Component
@@ -8,7 +9,7 @@ const BlogBanner = () => {
       <div className="blog-banner-overlay">
         <h1>Latest News & Blogs</h1>
         <p className="blog-breadcrumb">
-          <span className="blog-crumb-home">Home</span> &gt; <span className="blog-crumb-current">Blog</span>
+          <Link to="/">Home</Link> &gt;  <span className="blog-crumb-current">Blog</span>
         </p>
       </div>
     </div>
@@ -16,7 +17,7 @@ const BlogBanner = () => {
 };
 
 // 2. Single Blog Card Component
-const BlogCard = ({ image, title, excerpt, date, author }) => {
+const BlogCard = ({ id, image, title, excerpt, date, author }) => {
   return (
     <div className="blog-card">
       <div className="blog-card-image">
@@ -30,7 +31,8 @@ const BlogCard = ({ image, title, excerpt, date, author }) => {
           <span className="blog-meta-divider">•</span>
           <span className="blog-meta-author">By {author}</span>
         </div>
-        <a href="#readmore" className="blog-readmore-btn">Read More</a>
+        <Link className="blog-readmore-btn" to={`/blog/${id}`}>Read More</Link>
+        
       </div>
     </div>
   );
@@ -111,6 +113,7 @@ const Blogs = () => {
           {blogData.map((blog) => (
             <BlogCard 
               key={blog.id}
+              id = {blog.id}
               image={blog.image}
               title={blog.title}
               excerpt={blog.excerpt}
