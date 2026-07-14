@@ -2,7 +2,7 @@ import "./Navbar.css";
 import { Link, NavLink } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { useState } from "react";
-// import logo from "../../assets/logo.png";
+import logo from "../../assets/logo.png";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -16,7 +16,7 @@ const Navbar = () => {
 
         <Link to="/" className="logo">
 
-          {/* <img src={logo} alt="Sahyog Foundation" /> */}
+          <img src={logo} alt="Sahyog Foundation" />
 
           <div className="logo-text">
             <h3>SAHYOG</h3>

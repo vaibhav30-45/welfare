@@ -1,6 +1,6 @@
 :root {
-  --primary: #2e6f40;
-  --primary-hover: #1e4a2b;
+  --primary: var(--primary);
+  --primary-hover:var(--primary-hover);
   --text-main: #2b352e;
   --text-muted: #626d64;
   --bg-page: #f8fbf9;
@@ -129,7 +129,7 @@
 }
 
 .article-body blockquote {
-  background: #f1f7f2;
+  background: #f7f5f1;
   border-left: 4px solid var(--primary);
   padding: 20px;
   font-style: italic;
@@ -235,11 +235,13 @@
 
 /* CTA DONATE WIDGET */
 .sidebar-cta-widget {
-  background: linear-gradient(135deg, var(--primary), var(--primary-hover));
-  color: var(--white);
+  background:  var(--white);
+  color: var(--text-main);
   padding: 30px;
   border-radius: 12px;
   text-align: center;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-lg);
 }
 
 .sidebar-cta-widget h3 {

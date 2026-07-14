@@ -1,0 +1,398 @@
+/* ===========================
+Dashboard
+=========================== */
+
+.dashboard-page{
+    display:flex;
+    flex-direction:column;
+    gap:30px;
+}
+
+.dashboard-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.dashboard-header h1{
+    font-size:34px;
+    color:#1B5E20;
+    font-weight:700;
+}
+
+.dashboard-header p{
+    color:#777;
+    margin-top:8px;
+    font-size:15px;
+}
+
+/* ===========================
+Stats
+=========================== */
+
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+}
+
+.stats-card{
+    background:#fff;
+    border-radius:18px;
+    padding:25px;
+    display:flex;
+    gap:20px;
+    align-items:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.35s;
+}
+
+.stats-card:hover{
+    transform:translateY(-6px);
+}
+
+.stats-icon{
+    width:70px;
+    height:70px;
+    border-radius:18px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:28px;
+    color:#fff;
+}
+
+.users{
+    background:#43A047;
+}
+
+.program{
+    background:#1E88E5;
+}
+
+.gallery{
+    background:#FB8C00;
+}
+
+.event{
+    background:#8E24AA;
+}
+
+.stats-card h2{
+    font-size:32px;
+    color:#222;
+    margin-bottom:6px;
+}
+
+.stats-card p{
+    color:#777;
+    margin-bottom:8px;
+}
+
+.stats-card span{
+    color:#2E7D32;
+    display:flex;
+    align-items:center;
+    gap:6px;
+    font-size:14px;
+    font-weight:600;
+}
+
+/* ===========================
+Grid
+=========================== */
+
+.dashboard-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:25px;
+}
+
+.dashboard-card{
+    background:#fff;
+    border-radius:18px;
+    padding:25px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+/* ===========================
+Card Header
+=========================== */
+
+.card-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+}
+
+.card-header h3{
+    font-size:22px;
+    color:#1B5E20;
+}
+
+.card-header button{
+    background:#2E7D32;
+    color:#fff;
+    border:none;
+    padding:10px 18px;
+    border-radius:8px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.card-header button:hover{
+    background:#1B5E20;
+}
+
+/* ===========================
+Donation Card
+=========================== */
+
+.donation-chart{
+    height:280px;
+    border-radius:15px;
+    background:linear-gradient(135deg,#43A047,#1B5E20);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.chart-placeholder{
+    text-align:center;
+    color:#fff;
+}
+
+.chart-placeholder h2{
+    font-size:44px;
+    margin-bottom:10px;
+}
+
+.chart-placeholder span{
+    font-size:18px;
+    opacity:.9;
+}
+/* ===========================
+Upcoming Events
+=========================== */
+
+.event-list{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.event-item{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    padding:15px;
+    border-radius:12px;
+    background:#F8FAFC;
+    transition:.3s;
+}
+
+.event-item:hover{
+    background:#E8F5E9;
+    transform:translateX(5px);
+}
+
+.event-date{
+    width:65px;
+    height:65px;
+    border-radius:12px;
+    background:#2E7D32;
+    color:#fff;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+.event-date h4{
+    font-size:22px;
+    margin:0;
+    line-height:1;
+}
+
+.event-date span{
+    font-size:13px;
+    margin-top:5px;
+}
+
+.event-item h5{
+    font-size:17px;
+    color:#222;
+    margin-bottom:5px;
+}
+
+.event-item p{
+    color:#777;
+    font-size:14px;
+}
+
+/* ===========================
+Table
+=========================== */
+
+.dashboard-table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+.dashboard-table th{
+    background:#F4F7F6;
+    color:#1B5E20;
+    font-size:15px;
+    font-weight:600;
+    text-align:left;
+    padding:15px;
+}
+
+.dashboard-table td{
+    padding:16px 15px;
+    border-bottom:1px solid #eee;
+    color:#555;
+    font-size:14px;
+}
+
+.dashboard-table tr:hover{
+    background:#F8FFF8;
+}
+
+/* ===========================
+Status Badge
+=========================== */
+
+.status{
+    display:inline-block;
+    padding:6px 14px;
+    border-radius:30px;
+    font-size:13px;
+    font-weight:600;
+}
+
+.status.active{
+    background:#E8F5E9;
+    color:#2E7D32;
+}
+
+.status.completed{
+    background:#E3F2FD;
+    color:#1565C0;
+}
+
+/* ===========================
+Quick Actions
+=========================== */
+
+.quick-actions{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:15px;
+}
+
+.quick-actions button{
+    background:#2E7D32;
+    color:#fff;
+    border:none;
+    border-radius:10px;
+    padding:14px;
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.quick-actions button:hover{
+    background:#1B5E20;
+    transform:translateY(-3px);
+}
+
+/* ===========================
+Responsive
+=========================== */
+
+@media(max-width:1200px){
+
+.stats-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.dashboard-grid{
+    grid-template-columns:1fr;
+}
+
+}
+
+@media(max-width:768px){
+
+.stats-grid{
+    grid-template-columns:1fr;
+}
+
+.dashboard-header{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:10px;
+}
+
+.dashboard-header h1{
+    font-size:28px;
+}
+
+.dashboard-card{
+    padding:20px;
+}
+
+.chart-placeholder h2{
+    font-size:34px;
+}
+
+.dashboard-table{
+    display:block;
+    overflow-x:auto;
+    white-space:nowrap;
+}
+
+}
+
+@media(max-width:576px){
+
+.stats-card{
+    flex-direction:column;
+    align-items:flex-start;
+    text-align:left;
+}
+
+.stats-icon{
+    width:60px;
+    height:60px;
+    font-size:24px;
+}
+
+.event-item{
+    flex-direction:column;
+    align-items:flex-start;
+}
+
+.event-date{
+    width:55px;
+    height:55px;
+}
+
+.card-header{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:15px;
+}
+
+.card-header button{
+    width:100%;
+}
+
+.quick-actions button{
+    width:100%;
+}
+
+}
