@@ -96,12 +96,12 @@ Filter Buttons
 }
 
 .gallery-filter button:hover{
-    background:#2E7D32;
+    background:#F5821F;
     color:white;
 }
 
 .gallery-filter .active{
-    background:#2E7D32;
+    background:#F5821F;
     color:#fff;
 }
 
@@ -155,7 +155,7 @@ Hover
 
     inset:0;
 
-    background:rgba(20,80,35,.65);
+    background:rgba(80, 46, 20, 0.65);
 
     display:flex;
 

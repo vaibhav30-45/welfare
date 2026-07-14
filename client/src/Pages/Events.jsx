@@ -39,7 +39,7 @@ const EventCard = ({ image, day, month, title, time, location, excerpt, isPast }
         <p className="event-excerpt">{excerpt}</p>
         
         <a href="#eventdetails" className="event-btn">
-          {isPast ? 'View Details' : 'Join Event &rarr;'}
+          {isPast ? 'View Details' : 'Join Event '}
         </a>
       </div>
     </div>

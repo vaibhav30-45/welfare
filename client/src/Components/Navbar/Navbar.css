@@ -172,7 +172,7 @@ body{
 
 .donate-btnn:hover{
 
-    background:var(--secondary-hover);
+    background:var(--primary-hover);
 
     transform:translateY(-3px);
 
