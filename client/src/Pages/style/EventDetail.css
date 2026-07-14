@@ -1,0 +1,335 @@
+/* --- CUSTOM COLOR ROOTS SYNCED WITH LOGO --- */
+:root {
+  --primary-green: #2E6F40;       /* Logo Green */
+  --accent-saffron: #E58E26;      /* Logo Saffron */
+  --bg-mint: #F8FBF9;             /* Page Background Mint */
+  --text-dark: #1F2421;
+  --text-muted: #555E57;
+  --white: #FFFFFF;
+  --border-grey: #E5ECE7;
+  --speed: 0.3s ease-in-out;
+}
+
+.evt-detail-page-wrapper * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.evt-detail-page-wrapper {
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: var(--bg-mint);
+  color: var(--text-dark);
+}
+
+.evt-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: clamp(20px, 5vw, 60px) 20px;
+}
+
+/* --- BANNER HEADER --- */
+.evt-detail-banner {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=1200');
+  background-size: cover;
+  background-position: center;
+  color: var(--white);
+  padding: clamp(60px, 8vw, 100px) 20px;
+  text-align: center;
+}
+
+.evt-detail-banner h1 {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.evt-breadcrumb {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95rem;
+}
+
+.clickable-crumb {
+  cursor: pointer;
+  opacity: 0.8;
+  transition: var(--speed);
+}
+
+.clickable-crumb:hover {
+  opacity: 1;
+  color: var(--accent-saffron);
+}
+
+.crumb-arrow {
+  font-size: 0.8rem;
+  opacity: 0.5;
+}
+
+.evt-active-crumb {
+  color: var(--accent-saffron);
+  font-weight: 500;
+}
+
+/* --- RESPONSIVE DYNAMIC GRID --- */
+.evt-layout-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+/* --- LEFT ARTICLE AREA --- */
+.evt-main-card {
+  background-color: var(--white);
+  padding: clamp(20px, 4vw, 40px);
+  border-radius: 12px;
+  border: 1px solid var(--border-grey);
+  box-shadow: 0 10px 30px rgba(46, 111, 64, 0.05);
+}
+
+/* AUTO RESPONSIVE SCALING IMAGE LOGIC AS REQUESTED */
+.evt-image-box {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.evt-image-box img {
+  width: 100%;
+  height: auto;         /* Scaled auto height reduction based on container resizing */
+  display: block;
+  object-fit: contain;
+}
+
+.evt-info-section h2 {
+  font-size: clamp(1.4rem, 3vw, 1.8rem);
+  color: var(--primary-green);
+  margin-bottom: 15px;
+}
+
+.evt-excerpt-text {
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 20px;
+  border-left: 4px solid var(--accent-saffron);
+  padding-left: 15px;
+}
+
+.evt-full-paragraph {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #3b423d;
+  margin-bottom: 30px;
+}
+
+/* SPECS DETAILS ROW */
+.evt-specs {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: var(--bg-mint);
+  padding: 25px;
+  border-radius: 8px;
+  border: 1px solid var(--border-grey);
+  margin-bottom: 30px;
+}
+
+.spec-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.spec-icon {
+  font-size: 1.5rem;
+  color: var(--primary-green);
+  margin-top: 3px;
+}
+
+.spec-item h4 {
+  font-size: 1rem;
+  margin-bottom: 4px;
+  color: var(--text-dark);
+}
+
+.spec-item p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+/* --- FOOTER BACK BUTTON --- */
+.evt-back-btn {
+  background: transparent;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--primary-green);
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: var(--speed);
+  font-family: inherit;
+}
+
+.evt-back-btn:hover {
+  color: var(--accent-saffron);
+  transform: translateX(-4px);
+}
+
+/* --- RIGHT SIDEBAR AREA --- */
+.evt-sidebar {
+  position: sticky;
+  top: 20px;
+}
+
+.evt-registration-form-box,
+.evt-status-alert-box {
+  background-color: var(--white);
+  padding: 30px 25px;
+  border-radius: 12px;
+  border: 1px solid var(--border-grey);
+  box-shadow: 0 10px 30px rgba(46, 111, 64, 0.05);
+}
+
+.evt-registration-form-box h3,
+.evt-status-alert-box h3 {
+  font-size: 1.3rem;
+  color: var(--primary-green);
+  margin-bottom: 10px;
+}
+
+.form-lead-desc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
+
+/* FORM ELEMENTS */
+.evt-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: left;
+}
+
+.form-field label {
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.form-field input {
+  padding: 11px;
+  border: 1px solid var(--border-grey);
+  border-radius: 6px;
+  background-color: var(--bg-mint);
+  font-size: 0.95rem;
+  transition: var(--speed);
+}
+
+.form-field input:focus {
+  outline: none;
+  border-color: var(--primary-green);
+  background-color: var(--white);
+  box-shadow: 0 0 0 3px rgba(46, 111, 64, 0.1);
+}
+
+/* ACTION BUTTONS */
+.evt-submit-btn,
+.evt-explore-more-btn {
+  background-color: var(--accent-saffron);
+  color: var(--white);
+  padding: 13px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: var(--speed);
+}
+
+.evt-submit-btn:hover,
+.evt-explore-more-btn:hover {
+  background-color: #cc7a1e;
+  transform: translateY(-1px);
+}
+
+/* REGISTRATION SUCCESS VIEW */
+.evt-success-box {
+  text-align: center;
+  padding: 15px 0;
+}
+
+.evt-success-box h4 {
+  color: var(--primary-green);
+  margin-bottom: 10px;
+}
+
+.evt-success-box p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.evt-form-reset-btn {
+  background: transparent;
+  border: 1px dashed var(--primary-green);
+  color: var(--primary-green);
+  padding: 8px 15px;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* PAST EVENTS SIDEBAR VIEW */
+.evt-status-alert-box.past {
+  border-top: 5px solid var(--accent-saffron);
+}
+
+.evt-status-alert-box.past h3 {
+  color: var(--accent-saffron);
+}
+
+.evt-status-alert-box.past p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.evt-explore-more-btn {
+  width: 100%;
+}
+
+/* ERROR NOT FOUND ROUTE */
+.evt-not-found {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.evt-not-found h2 {
+  margin-bottom: 20px;
+}
+
+/* --- ULTRA RESPONSIVE MEDIA BREAKPOINTS --- */
+@media (max-width: 992px) {
+  .evt-layout-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .evt-sidebar {
+    position: static;
+  }
+}
