@@ -1,7 +1,7 @@
 /* --- VARIABLES --- */
 :root {
-  --primary-color: #2e6f40;      /* NGO Dark Green Theme */
-  --primary-hover: #1e4a2b;
+  --primary-color:var(--primary);      /* NGO Dark Green Theme */
+  --primary-hover: var(--primary-hover);
   --accent-color: #e58e26;       /* Warm Orange for Upcoming Badges */
   --past-color: #7f8c8d;         /* Grey for Past Events */
   --bg-light: #f9fbf9;

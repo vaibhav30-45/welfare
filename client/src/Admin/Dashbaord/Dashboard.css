@@ -201,7 +201,7 @@ Upcoming Events
     width:65px;
     height:65px;
     border-radius:12px;
-    background:#2E7D32;
+    background:var(--primary);
     color:#fff;
     display:flex;
     flex-direction:column;

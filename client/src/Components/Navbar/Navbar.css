@@ -151,9 +151,9 @@ body{
 
 }
 
-.donate-btn{
+.donate-btnn{
 
-   background:var(--secondary);
+   background:var(--primary);
     color:var(--white);
 
     text-decoration:none;
@@ -170,7 +170,7 @@ body{
 
 }
 
-.donate-btn:hover{
+.donate-btnn:hover{
 
     background:var(--secondary-hover);
 
