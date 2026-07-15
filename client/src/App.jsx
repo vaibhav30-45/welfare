@@ -22,6 +22,8 @@ import EventEdit from "./Admin/AdminEvents/EventEdit";
 import GalleryList from "./Admin/GalleryAdmin/GalleryList";
 import AddGallery from "./Admin/GalleryAdmin/AddGallery";
 import EditGallery from "./Admin/GalleryAdmin/EditGallery";
+import ProgramDetail from "./Pages/ProgramDetails";
+import EventDetail from "./Pages/EventDetail";
 
 
 function App() {
@@ -74,8 +76,10 @@ element={<EditGallery />}
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/programs" element={<Programs />} />
+        <Route path="/programs/:id" element={<ProgramDetail />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/events" element={<Events />} />
+        <Route path="/events/:id" element={<EventDetail />} />
         <Route path="/blogs" element={<Blogs/>} />
         <Route path="/blog/:id" element={<BlogDetails />} />
         <Route path="/gallery" element={<Gallery />} />

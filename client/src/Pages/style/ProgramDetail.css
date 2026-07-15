@@ -1,0 +1,260 @@
+/* --- CUSTOM VARIABLE SYNCING LOGO COLORS --- */
+:root {
+        /* Logo Green */
+  --accent-saffron: #E58E26;      /* Logo Saffron */
+  --bg-soft-mint: #F8FBF9;        /* Soft Off-white Background */
+  --text-dark: #1F2421;
+  --text-muted: #555E57;
+  --white: #FFFFFF;
+  --border-light: #E8EFEA;
+  --shadow-card: 0 10px 30px rgba(46, 111, 64, 0.06);
+  --speed: 0.3s ease-in-out;
+}
+
+.program-detail-page-wrapper * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.program-detail-page-wrapper {
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: var(--bg-soft-mint);
+  color: var(--text-dark);
+}
+
+.prog-detail-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: clamp(30px, 5vw, 60px) 20px;
+}
+
+/* --- BANNER PATTERN MATCHING MAIN PAGE --- */
+.prog-detail-banner {
+  position: relative;
+  height: 300px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.prog-detail-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.prog-banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.prog-banner-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: var(--white);
+  width: 100%;
+  padding: 0 20px;
+}
+
+.prog-banner-content h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 10px;
+}
+
+.prog-banner-content p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 1rem;
+}
+
+.prog-banner-content a {
+  color: var(--white);
+  text-decoration: none;
+  opacity: 0.8;
+  transition: var(--speed);
+}
+
+.prog-banner-content a:hover {
+  opacity: 1;
+  color: var(--accent-saffron);
+}
+
+.prog-active-crumb {
+  color: var(--accent-saffron);
+  font-weight: 500;
+}
+
+/* --- DYNAMIC RESPONSIVE LAYOUT GRID --- */
+.prog-detail-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+/* --- LEFT CONTENT BLOCK --- */
+.prog-detail-main {
+  background-color: var(--white);
+  padding: clamp(20px, 4vw, 40px);
+  border-radius: 12px;
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-card);
+}
+
+/* RESPONSIVE AUTO-SCALING IMAGE LOGIC AS REQUESTED */
+.prog-detail-image-box {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.prog-detail-image-box img {
+  width: 100%;
+  height: auto;         /* Auto scaling height based on width resizing */
+  display: block;
+  object-fit: contain;
+}
+
+.prog-detail-text h2 {
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  color: var(--primary);
+  margin-bottom: 15px;
+}
+
+.prog-lead-text {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 20px;
+  border-left: 4px solid var(--accent-saffron);
+  padding-left: 15px;
+}
+
+.prog-full-body-text {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #3b423d;
+  margin-bottom: 30px;
+}
+
+/* IMPACT DISPLAY BLOCK */
+.prog-impact-card {
+  background-color: #f6f4f0;
+  border: 1px dashed var(--primary);
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+.prog-impact-card h4 {
+  color: var(--primary);
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+/* FOOTER NAV INTERACTIVE BACK BUTTON */
+.prog-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--speed);
+}
+
+.prog-back-btn:hover {
+  color: var(--accent-saffron);
+  transform: translateX(-4px);
+}
+
+/* --- RIGHT SIDEBAR CTA WITH SAFFRON THEMING --- */
+.prog-detail-sidebar {
+  position: sticky;
+  top: 20px;
+}
+
+.prog-cta-box {
+  background:  var(--white);
+  color: black;
+  padding: 35px 25px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(46, 111, 64, 0.2);
+}
+
+.heart-icon {
+  font-size: 2.5rem;
+  color: var(--accent-saffron);
+  margin-bottom: 15px;
+}
+
+.prog-cta-box h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.prog-cta-box p {
+  font-size: 0.95rem;
+  opacity: 0.85;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+/* DONATE NOW ACTION BUTTON */
+.prog-donate-now-btn {
+  width: 100%;
+  background-color: var(--accent-saffron);
+  color: var(--white);
+  border: none;
+  padding: 14px 20px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: var(--speed);
+}
+
+.prog-donate-now-btn:hover {
+  background-color: #cc7a1e;
+  transform: translateY(-2px);
+}
+
+/* ERROR ROUTE NOT FOUND SCREEN */
+.prog-not-found {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.prog-not-found h2 {
+  margin-bottom: 20px;
+}
+
+/* --- ULTRA RESPONSIVE MEDIA BREAKPOINTS --- */
+@media (max-width: 992px) {
+  .prog-detail-grid {
+    grid-template-columns: 1fr;  /* Sidebar layout shifts downward cleanly */
+    gap: 30px;
+  }
+  
+  .prog-detail-sidebar {
+    position: static;
+  }
+}
+
+@media (max-width: 576px) {
+  .prog-detail-banner {
+    height: 220px;
+  }
+}

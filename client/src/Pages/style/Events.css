@@ -182,7 +182,7 @@
 }
 
 /* CONTENT CONTAINER */
-.event-content {
+.event-contents {
   padding: 24px;
   display: flex;
   flex-direction: column;
@@ -217,7 +217,7 @@
 }
 
 /* BUTTON BUTTONS */
-.event-btn {
+.event-bt {
   display: block;
   text-align: center;
   padding: 12px;
@@ -232,18 +232,18 @@
   transition: var(--transition);
 }
 
-.event-btn:hover {
+.event-bt:hover {
   background-color: var(--primary-color);
   color: white;
 }
 
 /* Past Event Button override */
-.past-event .event-btn {
+.past-event .event-bt {
   color: var(--past-color);
   border-color: var(--past-color);
 }
 
-.past-event .event-btn:hover {
+.past-event .event-bt:hover {
   background-color: var(--past-color);
   color: white;
 }

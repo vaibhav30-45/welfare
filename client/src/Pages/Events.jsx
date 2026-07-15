@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // 1. useNavigate import karein
 import '../Pages/style/Events.css';
 
-// 1. Events Banner Component
+// Events Banner Component
 const EventsBanner = () => {
   return (
     <div className="events-banner">
@@ -15,8 +16,10 @@ const EventsBanner = () => {
   );
 };
 
-// 2. Event Card Component (With Date Badge)
-const EventCard = ({ image, day, month, title, time, location, excerpt, isPast }) => {
+// Event Card Component
+const EventCard = ({ id, image, day, month, title, time, location, excerpt, isPast }) => {
+  const navigate = useNavigate(); // 2. Hook initialize kiya
+
   return (
     <div className={`event-card ${isPast ? 'past-event' : ''}`}>
       <div className="event-image-container">
@@ -28,19 +31,21 @@ const EventCard = ({ image, day, month, title, time, location, excerpt, isPast }
         {isPast && <div className="past-tag">Past Event</div>}
       </div>
       
-      <div className="event-content">
+      <div className="event-contents">
         <h3 className="event-title">{title}</h3>
-        
         <div className="event-meta">
-          <span className="meta-item">🕒 {time}</span>
-          <span className="meta-item">📍 {location}</span>
+          <span>🕒 {time}</span>
+          <span>📍 {location}</span>
         </div>
-        
         <p className="event-excerpt">{excerpt}</p>
         
-        <a href="#eventdetails" className="event-btn">
-          {isPast ? 'View Details' : 'Join Event '}
-        </a>
+        {/* 3. Button click par dynamic route navigate karein */}
+        <button 
+          className="event-bt" 
+          onClick={() => navigate(`/events/${id}`)}
+        >
+          {isPast ? 'View Details' : 'Join Event'}
+        </button>
       </div>
     </div>
   );
@@ -110,9 +115,7 @@ const Events = () => {
   return (
     <div className="events-page-wrapper">
       <EventsBanner />
-      
       <div className="events-content-container">
-        {/* Tab Navigation Filter */}
         <div className="events-tabs">
           <button 
             className={`tab-btn ${activeTab === 'upcoming' ? 'active' : ''}`}
@@ -128,7 +131,6 @@ const Events = () => {
           </button>
         </div>
 
-        {/* Dynamic Events Grid */}
         <div className="events-grid">
           {activeTab === 'upcoming' ? (
             upcomingEvents.map(event => (

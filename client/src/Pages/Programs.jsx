@@ -1,5 +1,5 @@
 import "../Pages/style/Programs.css";
-
+import { Link, useNavigate } from 'react-router-dom'
 import { FaChevronRight, FaArrowRight } from "react-icons/fa";
 
 import banner from "../assets/ngo.jpg";
@@ -58,6 +58,7 @@ const programs = [
 ];
 
 const Programs = () => {
+  const navigate = useNavigate();
   return (
     <>
       <section className="program-banner">
@@ -104,10 +105,11 @@ const Programs = () => {
 
                   <p>{item.description}</p>
 
-                  <button>
+                  <button onClick={() => navigate(`/programs/${item.id}`)}>
                     Read More
                     <FaArrowRight />
                   </button>
+                  
                 </div>
               </div>
             ))}
