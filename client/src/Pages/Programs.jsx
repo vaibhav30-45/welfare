@@ -10,10 +10,12 @@ import program3 from "../assets/program1.jpg";
 import program4 from "../assets/program1.jpg";
 import program5 from "../assets/program1.jpg";
 import program6 from "../assets/program2.jpg";
+import { useState } from "react";
 
 const programs = [
   {
     id: 1,
+    category: "Education",
     image: program1,
     title: "Child Education",
     description: "Providing free and quality education to children in need.",
@@ -21,6 +23,7 @@ const programs = [
 
   {
     id: 2,
+    category: "Empowerment",
     image: program2,
     title: "Women Empowerment",
     description:
@@ -29,6 +32,7 @@ const programs = [
 
   {
     id: 3,
+    category: "Skill Development",
     image: program3,
     title: "Skill Development",
     description: "Vocational training and career development programs.",
@@ -36,6 +40,7 @@ const programs = [
 
   {
     id: 4,
+    category: "Healthcare",
     image: program4,
     title: "Healthcare",
     description:
@@ -44,6 +49,7 @@ const programs = [
 
   {
     id: 5,
+    category: "Environment",
     image: program5,
     title: "Environmental",
     description: "Tree plantation drives and environmental awareness.",
@@ -52,6 +58,7 @@ const programs = [
   {
     id: 6,
     image: program6,
+    category: "Skill Development",
     title: "Digital Literacy",
     description: "Promoting digital skills and computer education.",
   },
@@ -59,6 +66,16 @@ const programs = [
 
 const Programs = () => {
   const navigate = useNavigate();
+
+  
+    const [active, setActive] = useState("All");
+  
+    const filteredPrograms =
+      active === "All"
+        ? programs
+        : programs.filter(
+            (item) => item.category === active
+          );
   return (
     <>
       <section className="program-banner">
@@ -80,21 +97,45 @@ const Programs = () => {
       <section className="program-page">
         <div className="container">
           <div className="program-tabs">
-            <button className="active">All Programs</button>
+            <button className={
+                active === "All" ? "active" : ""
+              }
+              onClick={() => setActive("All")}>All Programs</button>
 
-            <button>Education</button>
+            <button
+             className={
+                active === "Education" ? "active" : ""
+              }
+              onClick={() => setActive("Education")}>Education</button>
+             
+            
+            <button
+             className={
+                active === "Healthcare" ? "active" : ""
+              }
+              onClick={() => setActive("Healthcare")}>Healthcare</button>
 
-            <button>Healthcare</button>
+            <button
+             className={
+                active === "Empowerment" ? "active" : ""
+              }
+              onClick={() => setActive("Empowerment")}>Empowerment</button>
 
-            <button>Empowerment</button>
+            <button
+             className={
+                active === "Environment" ? "active" : ""
+              }
+              onClick={() => setActive("Environment")}>Environment</button>
 
-            <button>Environment</button>
-
-            <button>Skill Development</button>
+            <button
+             className={
+                active === "Skill Development" ? "active" : ""
+              }
+              onClick={() => setActive("Skill Development")}>Skill Development</button>
           </div>
 
           <div className="program-grid">
-            {programs.map((item) => (
+            { filteredPrograms.map((item) => (
               <div className="program-card" key={item.id}>
                 <div className="program-image">
                   <img src={item.image} alt={item.title} />

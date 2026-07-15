@@ -24,10 +24,13 @@ import AddGallery from "./Admin/GalleryAdmin/AddGallery";
 import EditGallery from "./Admin/GalleryAdmin/EditGallery";
 import ProgramDetail from "./Pages/ProgramDetails";
 import EventDetail from "./Pages/EventDetail";
+import ScrollToTop from "./ScrollToTop";
 
 
 function App() {
   return (
+  <>
+     <ScrollToTop />
     <Routes>
        
        <Route path="/admin" element={<AdminLayout />}>
@@ -87,7 +90,7 @@ element={<EditGallery />}
         
       </Route>
     </Routes>
-  );
+ </> );
 }
 
 export default App;

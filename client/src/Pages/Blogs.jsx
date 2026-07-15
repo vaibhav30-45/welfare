@@ -39,20 +39,34 @@ const BlogCard = ({ id, image, title, excerpt, date, author }) => {
 };
 
 // 3. Pagination Component
-const BlogPagination = () => {
+const BlogPagination = ({ currentPage, totalPages, setCurrentPage }) => {
   return (
     <div className="blog-pagination">
-      <button className="page-num active">1</button>
-      <button className="page-num">2</button>
-      <button className="page-num">3</button>
-      <button className="page-next">Next &rarr;</button>
+      {[...Array(totalPages)].map((_, index) => (
+        <button
+          key={index}
+          className={`page-num ${currentPage === index + 1 ? "active" : ""}`}
+          onClick={() => setCurrentPage(index + 1)}
+        >
+          {index + 1}
+        </button>
+      ))}
+
+      {/* <button
+        className="page-next"
+        disabled={currentPage === totalPages}
+        onClick={() => setCurrentPage(currentPage + 1)}
+      >
+        Next &rarr;
+      </button> */}
     </div>
   );
 };
 
 // Main Blog Page Assembly
 const Blogs = () => {
-  
+
+ 
   const blogData = [
     {
       id: 1,
@@ -103,6 +117,17 @@ const Blogs = () => {
       image: "https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=600"
     }
   ];
+   const [currentPage, setCurrentPage] = useState(1);
+
+const blogsPerPage = 6;
+
+const totalPages = Math.ceil(blogData.length / blogsPerPage);
+
+const currentBlogs = blogData.slice(
+  (currentPage - 1) * blogsPerPage,
+  currentPage * blogsPerPage
+);
+  
 
   return (
     <div className="blog-page-wrapper">
@@ -110,7 +135,7 @@ const Blogs = () => {
       
       <div className="blog-content-container">
         <div className="blog-grid">
-          {blogData.map((blog) => (
+          {currentBlogs.map((blog) => (
             <BlogCard 
               key={blog.id}
               id = {blog.id}
@@ -123,7 +148,11 @@ const Blogs = () => {
           ))}
         </div>
         
-        <BlogPagination />
+       <BlogPagination
+  currentPage={currentPage}
+  totalPages={totalPages}
+  setCurrentPage={setCurrentPage}
+/>
       </div>
     </div>
   );
