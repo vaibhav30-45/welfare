@@ -256,6 +256,7 @@
 
 .sidebar-donate-btn {
   background: #e58e26; 
+  text-decoration:none;
   color: var(--white);
   border: none;
   padding: 12px 25px;

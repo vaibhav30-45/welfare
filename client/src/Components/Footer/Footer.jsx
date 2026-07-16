@@ -9,10 +9,17 @@ import {
   FaMapMarkerAlt,
   FaArrowRight,
 } from "react-icons/fa";
+import { Link, useNavigate } from "react-router-dom";
 
 import logo from "../../assets/logo.png";
 
 const Footer = () => {
+  const navigate = useNavigate();
+
+  const handleCategoryClick = (categoryName) => {
+    // Isse hum state pass kar rahe hain jo Programs page read karega
+    navigate("/programs", { state: { category: categoryName } });
+  };
   return (
     <footer className="footer">
 
@@ -46,13 +53,13 @@ const Footer = () => {
 
             <div className="social-icons">
 
-              <a href="#"><FaFacebookF /></a>
+              <Link to="#"><FaFacebookF /></Link>
 
-              <a href="#"><FaInstagram /></a>
+              <Link to="#"><FaInstagram /></Link>
 
-              <a href="#"><FaLinkedinIn /></a>
+              <Link to="#"><FaLinkedinIn /></Link>
 
-              <a href="#"><FaYoutube /></a>
+              <Link to="#"><FaYoutube /></Link>
 
             </div>
 
@@ -66,17 +73,17 @@ const Footer = () => {
 
             <ul>
 
-              <li><a href="/">Home</a></li>
+              <li><Link to="/">Home</Link></li>
 
-              <li><a href="/about">About Us</a></li>
+              <li><Link to="/about">About Us</Link></li>
 
-              <li><a href="/programs">Programs</a></li>
+              <li><Link to="/programs">Programs</Link></li>
 
-              <li><a href="/events">Events</a></li>
+              <li><Link to="/events">Events</Link></li>
 
-              <li><a href="/gallery">Gallery</a></li>
+              <li><Link to="/gallery">Gallery</Link></li>
 
-              <li><a href="/blog">Blog</a></li>
+              <li><Link to="/blogs">Blog</Link></li>
 
             </ul>
 
@@ -88,19 +95,23 @@ const Footer = () => {
 
             <h3>Programs</h3>
 
-            <ul>
+            <ul className="clickable-footer-programs">
 
-              <li>Education</li>
-
-              <li>Healthcare</li>
-
-              <li>Women Empowerment</li>
-
-              <li>Environment</li>
-
-              <li>Child Welfare</li>
-
-              <li>Skill Development</li>
+             <li>
+    <Link to="/programs" state={{ category: "Education" }}>Education</Link>
+  </li>
+  <li>
+    <Link to="/programs" state={{ category: "Healthcare" }}>Healthcare</Link>
+  </li>
+  <li>
+    <Link to="/programs" state={{ category: "Empowerment" }}>Women Empowerment</Link>
+  </li>
+  <li>
+    <Link to="/programs" state={{ category: "Environment" }}>Environment</Link>
+  </li>
+  <li>
+    <Link to="/programs" state={{ category: "Skill Development" }}>Skill Development</Link>
+  </li>
 
             </ul>
 
@@ -132,11 +143,15 @@ const Footer = () => {
 
               <FaEnvelope />
 
-              <span>Rajkumarvishwakara9575@gmail.com</span>
+              <Link to="mailto:Rajkumarvishwakara9575@gmail.com">
+
+                <span>Rajkumarvishwakara9575@gmail.com</span>
+
+              </Link>
 
             </div>
 
-            <div className="newsletter">
+            {/* <div className="newsletter">
 
               <input
                 type="email"
@@ -149,7 +164,7 @@ const Footer = () => {
 
               </button>
 
-            </div>
+            </div> */}
 
           </div>
 
@@ -170,9 +185,9 @@ const Footer = () => {
 
           <div>
 
-            <a href="/">Privacy Policy</a>
+            <Link to="/privacy-policy">Privacy Policy</Link>
 
-            <a href="/">Terms & Conditions</a>
+            <Link to="/terms-conditions">Terms & Conditions</Link>
 
           </div>
 

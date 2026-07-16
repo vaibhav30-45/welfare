@@ -216,6 +216,7 @@
 .prog-donate-now-btn {
   width: 100%;
   background-color: var(--accent-saffron);
+  text-decoration:none;
   color: var(--white);
   border: none;
   padding: 14px 20px;

@@ -4,6 +4,7 @@ import {
 } from "react-icons/fa";
 
 import banner from "../assets/aboutt.jpg";
+import directorImg from "../assets/director.jpeg";
 import storyImg from "../assets/about.jpg";
 
 const journey = [
@@ -154,7 +155,79 @@ const About = () => {
         </div>
 
       </section>
+       
 
+       {/* ================= Board of Directors ================= */}
+
+<section className="director-section">
+
+  <div className="container director-wrapper">
+
+    {/* Left Content */}
+
+    <div className="director-content">
+
+      <span className="director-tag">
+        Leadership
+      </span>
+
+      <h2>
+        Board of Directors
+      </h2>
+
+      <h4>
+        Mr. 
+      </h4>
+
+      <p className="director-designation">
+        Founder & Managing Director
+      </p>
+
+      <p>
+        Our Board of Directors provides strategic guidance and
+        leadership to ensure the Foundation remains committed
+        to its mission of creating meaningful social impact.
+        Their experience, integrity, and dedication help us
+        strengthen our initiatives in education, healthcare,
+        women empowerment, environmental sustainability, and
+        community development.
+      </p>
+
+      <div className="director-points">
+
+        <div className="point">
+          <FaCheckCircle />
+          <span>Visionary Leadership</span>
+        </div>
+
+        <div className="point">
+          <FaCheckCircle />
+          <span>Transparent Governance</span>
+        </div>
+
+        <div className="point">
+          <FaCheckCircle />
+          <span>Community-Centered Decisions</span>
+        </div>
+
+      </div>
+
+    </div>
+
+    {/* Right Image */}
+
+    <div className="director-image">
+
+      <img
+        src={directorImg}
+        alt="Board Director"
+      />
+
+    </div>
+
+  </div>
+
+</section>
       {/* ================= Mission Vision ================= */}
 
       <section className="mission-section">

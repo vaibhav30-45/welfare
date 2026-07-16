@@ -4,12 +4,12 @@ import { FaChevronRight } from "react-icons/fa";
 
 import banner from "../assets/gallery.jpg";
 
-import img1 from "../assets/gallery.jpg";
-import img2 from "../assets/gallery2.jpg";
-import img3 from "../assets/gallery.jpg";
-import img4 from "../assets/gallery.jpg";
-import img5 from "../assets/gallery2.jpg";
-import img6 from "../assets/gallery3.jpg";
+import img1 from "../assets/programs1.jpeg";
+import img2 from "../assets/events1.jpeg";
+import img3 from "../assets/programs2.jpg.jpeg";
+import img4 from "../assets/programs3.jpeg";
+import img5 from "../assets/events3.jpeg";
+import img6 from "../assets/programs4.jpeg";
 
 const galleryData = [
 

@@ -70,7 +70,10 @@ const BlogSidebar = ({ currentId }) => {
       <div className="sidebar-cta-widget">
         <h3>Make a Difference</h3>
         <p>Your support can bring education and healthcare to a child today.</p>
-        <button className="sidebar-donate-btn">Donate Now</button>
+       
+        <Link to="/donate" className="sidebar-donate-btn">
+                  Donate Now
+                </Link>
       </div>
     </div>
   );

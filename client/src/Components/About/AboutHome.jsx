@@ -1,7 +1,8 @@
 import "./AboutHome.css";
-import about1 from "../../assets/education.jpeg";
-import about2 from "../../assets/education.jpeg";
-import about3 from "../../assets/education.jpeg";
+import about1 from "../../assets/events2.jpeg";
+import about2 from "../../assets/events1.jpeg";
+import about3 from "../../assets/events4.jpeg";
+import directorImg from "../../assets/director.jpeg";
 
 import {
   FaCheckCircle,
@@ -168,7 +169,7 @@ const AboutHome = () => {
             <div className="about-founder">
 
               <img
-                src="https://randomuser.me/api/portraits/men/45.jpg"
+                src={directorImg}
                 alt=""
               />
 

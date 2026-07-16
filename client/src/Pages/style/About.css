@@ -184,7 +184,7 @@ Mission
 ================================== */
 
 .mission-section{
-
+    padding-top:70px;
     padding-bottom:70px;
 
 }
@@ -246,6 +246,110 @@ Mission
     font-size:15px;
 
     line-height:1.9;
+
+}
+
+
+/* ================= Board of Directors ================= */
+
+.director-section{
+    padding:90px 0;
+    background:#fff;
+}
+
+.director-wrapper{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:70px;
+}
+
+.director-content{
+    flex:1;
+}
+
+.director-tag{
+    display:inline-block;
+    padding:8px 18px;
+    background:#eaf7ef;
+    color:#0a7d39;
+    border-radius:30px;
+    font-size:14px;
+    font-weight:600;
+    margin-bottom:15px;
+}
+
+.director-content h2{
+    font-size:40px;
+    margin-bottom:15px;
+    color:#222;
+}
+
+.director-content h4{
+    font-size:24px;
+    color:#0a7d39;
+    margin-bottom:6px;
+}
+
+.director-designation{
+    color:#666;
+    font-weight:600;
+    margin-bottom:20px;
+}
+
+.director-content p{
+    color:#555;
+    line-height:1.9;
+    margin-bottom:25px;
+}
+
+.director-points{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.point{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.point svg{
+    color:#0a7d39;
+    font-size:18px;
+}
+
+.director-image{
+    flex:1;
+    text-align:center;
+}
+
+.director-image img{
+    width:100%;
+    max-width:450px;
+   margin :auto;
+    border-radius:20px;
+    object-fit:cover;
+    box-shadow:0 20px 50px rgba(0,0,0,.12);
+}
+
+/* Responsive */
+
+@media(max-width:991px){
+
+.director-wrapper{
+    flex-direction:column-reverse;
+    text-align:center;
+}
+
+.point{
+    justify-content:center;
+}
+
+.director-content h2{
+    font-size:32px;
+}
 
 }
 /* ==================================

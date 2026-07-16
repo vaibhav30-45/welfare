@@ -5,9 +5,9 @@ import {
   FaArrowRight,
 } from "react-icons/fa";
 
-import event1 from "../../assets/education.jpeg";
-import event2 from"../../assets/education.jpeg";
-import event3 from "../../assets/education.jpeg";
+import event1 from "../../assets/healthcamp.png";
+import event2 from"../../assets/edu1.jpg";
+import event3 from "../../assets/tree.png";
 
 const events = [
   {

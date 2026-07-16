@@ -134,7 +134,10 @@ const ProgramDetail = () => {
                 <FaHeart className="heart-icon" />
                 <h3>Support This Mission</h3>
                 <p>Your contribution can directly fuel our active operational costs for this specific program.</p>
-                <button className="prog-donate-now-btn">Donate Now</button>
+                
+                 <Link to="/donate" className="prog-donate-now-btn">
+          Donate Now
+        </Link>
               </div>
             </div>
 

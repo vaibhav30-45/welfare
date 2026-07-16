@@ -1,16 +1,16 @@
 import "../Pages/style/Programs.css";
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, useNavigate, useLocation } from 'react-router-dom'
 import { FaChevronRight, FaArrowRight } from "react-icons/fa";
 
 import banner from "../assets/ngo.jpg";
 
-import program1 from "../assets/program1.jpg";
-import program2 from "../assets/program2.jpg";
-import program3 from "../assets/program1.jpg";
-import program4 from "../assets/program1.jpg";
-import program5 from "../assets/program1.jpg";
-import program6 from "../assets/program2.jpg";
-import { useState } from "react";
+import program1 from "../assets/child.jpeg";
+import program2 from "../assets/women.jpeg";
+import program3 from "../assets/skills2.jpeg";
+import program4 from "../assets/health.jpeg";
+import program5 from "../assets/env1.jpeg";
+import program6 from "../assets/skills.jpeg";
+import { useState, useEffect } from "react";
 
 const programs = [
   {
@@ -66,10 +66,23 @@ const programs = [
 
 const Programs = () => {
   const navigate = useNavigate();
-
+  const location = useLocation();
   
     const [active, setActive] = useState("All");
-  
+
+    
+    
+    useEffect(() => {
+
+      window.scrollTo(0, 0);
+    if (location.state && location.state.category) {
+      setActive(location.state.category);
+      
+      // State ko clean karne ke liye taaki page refresh par filter reset ho sake (optional)
+      window.history.replaceState({}, document.title);
+    }
+  }, [location]);
+
     const filteredPrograms =
       active === "All"
         ? programs
