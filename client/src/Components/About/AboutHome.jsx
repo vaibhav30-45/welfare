@@ -1,4 +1,5 @@
 import "./AboutHome.css";
+import { Link, useNavigate } from "react-router-dom";
 import about1 from "../../assets/events2.jpeg";
 import about2 from "../../assets/events1.jpeg";
 import about3 from "../../assets/events4.jpeg";
@@ -158,13 +159,13 @@ const AboutHome = () => {
           </div>
                     <div className="about-bottom">
 
-            <button className="about-btn">
-
-              Learn More
+            
+             <Link to="/about" className="about-btn">
+               Learn More
 
               <FaArrowRight />
-
-            </button>
+              </Link>
+              
 
             <div className="about-founder">
 
@@ -177,7 +178,7 @@ const AboutHome = () => {
 
                 <h4>
 
-                  Rajesh Sharma
+                  Mr. Rajkumar Vishwakarma
 
                 </h4>
 

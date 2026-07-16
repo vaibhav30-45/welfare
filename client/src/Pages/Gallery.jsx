@@ -17,36 +17,43 @@ const galleryData = [
     id: 1,
     image: img1,
     category: "Events",
+    title:"Community Gathering - Culture and Awareness Program",
   },
 
   {
     id: 2,
     image: img2,
     category: "Programs",
+    title:"Social Awareness - Nasha Mukt Bharat Abhiyan Jan Jagrookta Shapath",
+    
   },
 
   {
     id: 3,
     image: img3,
     category: "Activities",
+    title:"Skill Development - NIESBUD Silai-Kadai & Beauty Therapist Certification",
   },
 
   {
     id: 4,
     image: img4,
     category: "Events",
+    title:"Collaboration Setup - M.P. Jan Abhiyan Parishad Program",
   },
 
   {
     id: 5,
     image: img5,
     category: "Programs",
+    title:"Recognition & Dignitaries Meet - Government Recognition Program",
   },
 
   {
     id: 6,
     image: img6,
     category: "Activities",
+     title:"Plantation Drive - 'Ek Ped Maa Ke Naam' Paudharopan Karyakram",
   },
 
 ];
@@ -161,7 +168,8 @@ const Gallery = () => {
               <div className="gallery-hover">
 
                 <span>
-                  {item.category}
+                 
+                 {item.title} 
                 </span>
 
               </div>

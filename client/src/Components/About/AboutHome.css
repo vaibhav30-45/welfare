@@ -159,6 +159,7 @@ ABOUT BOTTOM
 }
 
 .about-btn{
+    width:230px;
     display:flex;
     align-items:center;
     gap:12px;
@@ -172,6 +173,7 @@ ABOUT BOTTOM
     font-weight:600;
     transition:.35s ease;
     box-shadow:0 10px 30px rgba(46,125,50,.25);
+    text-decoration:none;
 }
 
 .about-btn svg{

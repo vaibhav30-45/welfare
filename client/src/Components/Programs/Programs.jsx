@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import "./Programs.css";
 import {
   FaGraduationCap,
@@ -39,6 +40,7 @@ const programData = [
 ];
 
 const Programs = () => {
+  const navigate = useNavigate();
   return (
     <section className="programs-section">
 
@@ -75,7 +77,7 @@ const Programs = () => {
 
               <p>{item.desc}</p>
 
-              <button>
+              <button onClick={() => navigate(`/programs/${item.id}`)}>
 
                 Learn More
 

@@ -66,15 +66,22 @@
     gap:15px;
 
 }
+.testimonial-icon{
+    width:65px;
+    height:65px;
+    color:var(--primary);
+    stroke-width: 1px;
+    border-radius:50%;
 
+}
 .testimonial-user img{
 
     width:65px;
 
     height:65px;
-
+   
     border-radius:50%;
-
+    
     object-fit:cover;
 
 }

@@ -172,10 +172,10 @@ Hover
 .gallery-hover span{
 
     color:white;
-
+     padding: 0 23px;
     font-size:22px;
 
-    font-weight:600;
+    font-weight:100;
 
     transform:translateY(20px);
 

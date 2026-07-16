@@ -8,10 +8,11 @@ import {
 import event1 from "../../assets/healthcamp.png";
 import event2 from"../../assets/edu1.jpg";
 import event3 from "../../assets/tree.png";
+import { useNavigate } from "react-router-dom";
 
 const events = [
   {
-    id: 1,
+    id: 2,
     image: event1,
     date: "12",
     month: "JUL",
@@ -21,17 +22,17 @@ const events = [
       "Providing free medical checkups, medicines and health awareness for rural communities.",
   },
   {
-    id: 2,
+    id: 3,
     image: event2,
-    date: "22",
+    date: "05",
     month: "AUG",
-    title: "Education For Every Child",
-    location: "Bhopal, Madhya Pradesh",
+    title: "Women Skill Workshop",
+    location: "Sahyog Center, Bhopal",
     desc:
-      "School kit distribution and educational support for underprivileged children.",
+      "A hands-on stitching and handcraft workshop designed to empower local women toward financial independence.",
   },
   {
-    id: 3,
+    id: 1,
     image: event3,
     date: "15",
     month: "SEP",
@@ -43,6 +44,7 @@ const events = [
 ];
 
 const Events = () => {
+  const navigate = useNavigate();
   return (
     <section className="events-section">
 
@@ -70,7 +72,7 @@ const Events = () => {
 
             <div className="event-card" key={event.id}>
 
-              <div className="event-image">
+              {/* <div className="event-image">
 
                 <img
                   src={event.image}
@@ -85,7 +87,7 @@ const Events = () => {
 
                 </div>
 
-              </div>
+              </div> */}
 
               <div className="event-content">
 
@@ -101,7 +103,7 @@ const Events = () => {
 
                 <p>{event.desc}</p>
 
-                <button>
+                <button  onClick={() => navigate(`/events/${event.id}`)}>
 
                   Read More
 

@@ -20,9 +20,23 @@ const programs = [
     title: "Child Education",
     description: "Providing free and quality education to children in need.",
   },
-
-  {
+{
     id: 2,
+    category: "Healthcare",
+    image: program4,
+    title: "Healthcare",
+    description:
+      "Medical camps and healthcare assistance for rural communities.",
+  },
+   {
+    id: 3,
+    category: "Environment",
+    image: program5,
+    title: "Environmental",
+    description: "Tree plantation drives and environmental awareness.",
+  },
+  {
+    id: 4,
     category: "Empowerment",
     image: program2,
     title: "Women Empowerment",
@@ -31,29 +45,13 @@ const programs = [
   },
 
   {
-    id: 3,
+    id: 5,
     category: "Skill Development",
     image: program3,
     title: "Skill Development",
     description: "Vocational training and career development programs.",
   },
 
-  {
-    id: 4,
-    category: "Healthcare",
-    image: program4,
-    title: "Healthcare",
-    description:
-      "Medical camps and healthcare assistance for rural communities.",
-  },
-
-  {
-    id: 5,
-    category: "Environment",
-    image: program5,
-    title: "Environmental",
-    description: "Tree plantation drives and environmental awareness.",
-  },
 
   {
     id: 6,
