@@ -1,11 +1,18 @@
 import "../Pages/style/Donate.css";
 import { FaChevronRight, FaCheckCircle } from "react-icons/fa";
 import banner from "../assets/donate.jpg";
+import SEO from "../Components/SEO";
 
 const Donate = () => {
   return (
     <>
-
+     <SEO
+title="Donate | Sahyog Welfare Foundation"
+description="Support our mission by making a donation."
+keywords="Donate NGO, Charity"
+image="/logo.png"
+url="https://www.sahyogfoundation.org/donate"
+/>
       {/* ================= Banner ================= */}
 
       <section className="donate-banner">
@@ -95,11 +102,11 @@ const Donate = () => {
 
               </div>
 
-              <button className="donate-btn">
+              {/* <button className="donate-btn">
 
                 Donate Now
 
-              </button>
+              </button> */}
 
             </div>
                         {/* ================= Right Card ================= */}

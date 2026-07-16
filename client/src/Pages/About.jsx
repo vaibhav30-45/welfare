@@ -15,6 +15,7 @@ import envPhoto from "../assets/programs4.jpeg";
 import awardPhoto from "../assets/img3.jpeg"; 
 import skillPhoto from "../assets/skills.jpeg"; 
 import healthPhoto from "../assets/itiNasha.jpeg";
+import SEO from "../Components/SEO";
 
 const journey = [
   {
@@ -83,6 +84,13 @@ const achievements = [
 const About = () => {
   return (
     <>
+       <SEO
+title="About Us | Sahyog Welfare Foundation"
+description="Learn about Sahyog Welfare Foundation, our mission, vision and impact."
+keywords="About NGO, Sahyog Foundation"
+image="/logo.png"
+url="https://www.sahyogfoundation.org/about"
+/>
       {/* ================= Banner ================= */}
       <section
         className="about-banner"

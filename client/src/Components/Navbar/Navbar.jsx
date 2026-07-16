@@ -10,7 +10,7 @@ import {
   FaLinkedinIn,
 } from "react-icons/fa";
 import { useState } from "react";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/logon.svg";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);

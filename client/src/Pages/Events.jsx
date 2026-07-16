@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom'; // 1. useNavigate import karein
 import '../Pages/style/Events.css';
+import SEO from "../Components/SEO";
+import program from "../assets/programs2.jpg.jpeg";
 
 // Events Banner Component
 const EventsBanner = () => {
@@ -94,11 +96,11 @@ const Events = () => {
       id: 4,
       day: "05",
       month: "JUN",
-      title: "World Environment Day Rally",
+      title: "International Women's Day Celebration",
       time: "07:30 AM - 10:30 AM",
-      location: "Shahpura Lake, Bhopal",
-      excerpt: "An awareness march and plastic cleanup drive successfully driven by 200+ active youth volunteers.",
-      image: "https://images.unsplash.com/photo-1618477388954-7852f32655ec?q=80&w=600"
+      location: "Sahyog Welfare Foundation, Bhopal",
+      excerpt: "Sahyog Welfare Foundation celebrated International Women's Day by honoring women and recognizing meritorious students for their outstanding achievements and inspiring contributions.",
+      image: program,
     },
     {
       id: 5,
@@ -113,6 +115,16 @@ const Events = () => {
   ];
 
   return (
+    <>
+     <SEO
+        title="Events | Sahyog Welfare Foundation"
+        description="Stay updated with our latest events and community initiatives."
+        keywords="NGO Events, Charity Events"
+        image="/logo.png"
+        url="https://www.sahyogfoundation.org/events"
+      />
+   
+    
     <div className="events-page-wrapper">
       <EventsBanner />
       <div className="events-content-container">
@@ -144,6 +156,7 @@ const Events = () => {
         </div>
       </div>
     </div>
+     </>
   );
 };
 

@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import about1 from "../../assets/events2.jpeg";
 import about2 from "../../assets/events1.jpeg";
 import about3 from "../../assets/events4.jpeg";
+import about4 from "../../assets/ab1.jpg";
 import directorImg from "../../assets/director.jpeg";
 
 import {
@@ -30,6 +31,10 @@ const AboutHome = () => {
             <div className="img-two">
               <img src={about2} alt="" />
             </div>
+
+              <div className="img-four">
+    <img src={about4} alt="" />
+  </div>
 
             <div className="img-three">
               <img src={about3} alt="" />

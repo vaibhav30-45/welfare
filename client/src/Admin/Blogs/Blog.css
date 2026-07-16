@@ -1,0 +1,455 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+.blog-admin-page,
+.blog-form-page{
+
+    padding:30px;
+    font-family:"Poppins",sans-serif;
+    background:#f7f8fc;
+    min-height:100vh;
+
+}
+
+/*=========================
+HEADER
+=========================*/
+
+.blog-admin-header,
+.form-header{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:30px;
+
+}
+
+.blog-admin-header h2,
+.form-header h2{
+
+    font-size:30px;
+    color:#222;
+    font-weight:700;
+
+}
+
+.blog-admin-header p,
+.form-header p{
+
+    color:#777;
+    margin-top:5px;
+
+}
+
+/*=========================
+BUTTONS
+=========================*/
+
+.add-blog-btn,
+.back-btn,
+.save-btn,
+.cancel-btn{
+
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+
+    padding:12px 22px;
+
+    border-radius:10px;
+
+    text-decoration:none;
+
+    border:none;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    font-weight:600;
+
+}
+
+.add-blog-btn,
+.save-btn{
+
+    background:var(--primary);
+    color:#fff;
+
+}
+
+.add-blog-btn:hover,
+.save-btn:hover{
+
+    background:var(--primary-hover);
+
+}
+
+.back-btn,
+.cancel-btn{
+
+    background:#ECECEC;
+    color:#333;
+
+}
+
+.back-btn:hover,
+.cancel-btn:hover{
+
+    background:#ddd;
+
+}
+
+/*=========================
+SEARCH
+=========================*/
+
+.blog-search{
+
+    width:350px;
+    position:relative;
+    margin-bottom:30px;
+
+}
+
+.blog-search input{
+
+    width:100%;
+    height:48px;
+
+    border:none;
+    outline:none;
+
+    background:#fff;
+
+    border-radius:12px;
+
+    padding-left:45px;
+
+    padding-right:15px;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+
+}
+
+.search-icon{
+
+    position:absolute;
+
+    top:50%;
+
+    left:15px;
+
+    transform:translateY(-50%);
+
+    color:#888;
+
+}
+
+/*=========================
+TABLE
+=========================*/
+
+.blog-table-wrapper{
+
+    background:#fff;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    box-shadow:0 10px 35px rgba(0,0,0,.08);
+
+}
+
+.blog-table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+.blog-table thead{
+
+    background:var(--primary);
+
+}
+
+.blog-table th{
+
+    color:#fff;
+
+    padding:18px;
+
+    text-align:left;
+
+    font-weight:600;
+
+}
+
+.blog-table td{
+
+    padding:18px;
+
+    border-bottom:1px solid #eee;
+
+    vertical-align:middle;
+
+}
+
+.blog-table tbody tr{
+
+    transition:.3s;
+
+}
+
+.blog-table tbody tr:hover{
+
+    background:#fff8f1;
+
+}
+
+.blog-thumb{
+
+    width:80px;
+
+    height:60px;
+
+    object-fit:cover;
+
+    border-radius:8px;
+
+}
+/*=========================
+ACTION BUTTONS
+=========================*/
+
+.edit-btn,
+.delete-btn{
+
+  
+    height:42px;
+
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    border:none;
+    border-radius:10px;
+
+    cursor:pointer;
+
+    margin-right:10px;
+
+    transition:.3s;
+
+    font-size:18px;   /* icon bada hoga */
+
+}
+
+.edit-btn{
+
+    background:#E8F5E9;
+
+    color:#2E7D32;
+
+    text-decoration:none;
+
+}
+
+.edit-btn:hover{
+
+    background:#C8E6C9;
+
+}
+
+.delete-btn{
+
+    background:#FDECEC;
+
+    color:#E53935;
+
+}
+
+.delete-btn:hover{
+
+    background:#FFD5D5;
+
+}
+
+/*=========================
+FORM
+=========================*/
+
+.blog-form{
+
+    background:#fff;
+
+    padding:30px;
+
+    border-radius:18px;
+
+    box-shadow:0 10px 35px rgba(0,0,0,.08);
+
+}
+
+.form-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:20px;
+
+}
+
+.form-group{
+
+    display:flex;
+
+    flex-direction:column;
+
+    margin-bottom:20px;
+
+}
+
+.form-group label{
+
+    margin-bottom:8px;
+
+    font-weight:600;
+
+    color:#444;
+
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+
+    width:100%;
+
+    padding:14px;
+
+    border:1px solid #ddd;
+
+    border-radius:10px;
+
+    outline:none;
+
+    font-size:15px;
+
+    transition:.3s;
+
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+
+    border-color:var(--primary);
+
+    box-shadow:0 0 0 3px rgba(245,130,31,.15);
+
+}
+
+.form-group textarea{
+
+    resize:vertical;
+
+}
+/*=========================
+IMAGE PREVIEW
+=========================*/
+
+.image-preview{
+
+    margin-bottom:25px;
+
+}
+
+.image-preview img{
+
+    width:220px;
+
+    border-radius:12px;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.15);
+
+}
+
+/*=========================
+BOTTOM BUTTONS
+=========================*/
+
+.form-buttons{
+
+    display:flex;
+
+    gap:15px;
+
+    margin-top:20px;
+
+}
+
+/*=========================
+RESPONSIVE
+=========================*/
+
+@media(max-width:768px){
+
+.blog-admin-header,
+.form-header{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+gap:15px;
+
+}
+
+.blog-search{
+
+width:100%;
+
+}
+
+.form-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.blog-table{
+
+display:block;
+
+overflow-x:auto;
+
+white-space:nowrap;
+
+}
+
+.form-buttons{
+
+flex-direction:column;
+
+}
+
+.save-btn,
+.cancel-btn{
+
+width:100%;
+
+}
+
+}

@@ -9,6 +9,7 @@ import event1 from "../../assets/healthcamp.png";
 import event2 from"../../assets/edu1.jpg";
 import event3 from "../../assets/tree.png";
 import { useNavigate } from "react-router-dom";
+import SEO from "../../Components/SEO";
 
 const events = [
   {
@@ -46,6 +47,7 @@ const events = [
 const Events = () => {
   const navigate = useNavigate();
   return (
+    
     <section className="events-section">
 
       <div className="container">
