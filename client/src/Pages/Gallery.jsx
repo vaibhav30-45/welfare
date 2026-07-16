@@ -10,6 +10,7 @@ import img3 from "../assets/programs2.jpg.jpeg";
 import img4 from "../assets/programs3.jpeg";
 import img5 from "../assets/events3.jpeg";
 import img6 from "../assets/programs4.jpeg";
+import SEO from "../Components/SEO";
 
 const galleryData = [
 
@@ -65,6 +66,13 @@ const Gallery = () => {
   return (
 
     <>
+    <SEO
+title="Gallery | Sahyog Welfare Foundation"
+description="View photos of our social work, health camps and educational activities."
+keywords="NGO Gallery, Photos"
+image="/logo.png"
+url="https://www.sahyogfoundation.org/gallery"
+/>
 
       {/* ================= Banner ================= */}
 

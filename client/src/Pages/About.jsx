@@ -6,6 +6,7 @@ import {
 import banner from "../assets/aboutt.jpg";
 import directorImg from "../assets/director.jpeg";
 import storyImg from "../assets/about.jpg";
+import SEO from "../Components/SEO";
 
 const journey = [
   {
@@ -38,7 +39,13 @@ const journey = [
 const About = () => {
   return (
     <>
-
+       <SEO
+title="About Us | Sahyog Welfare Foundation"
+description="Learn about Sahyog Welfare Foundation, our mission, vision and impact."
+keywords="About NGO, Sahyog Foundation"
+image="/logo.png"
+url="https://www.sahyogfoundation.org/about"
+/>
       {/* ================= Banner ================= */}
 
       <section

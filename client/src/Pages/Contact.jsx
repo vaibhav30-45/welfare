@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './style/Contact.css'; // Alag se banayi gayi CSS file ko import kiya
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaFacebook, FaInstagram, FaTwitter, FaLinkedin } from 'react-icons/fa';
+import SEO from "../Components/SEO";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -23,6 +24,15 @@ const Contact = () => {
   };
 
   return (
+    <>
+    <SEO
+title="Contact Us | Sahyog Welfare Foundation"
+description="Contact Sahyog Welfare Foundation for volunteering, donations and partnerships."
+keywords="Contact NGO"
+image="/logo.png"
+url="https://www.sahyogfoundation.org/contact"
+/>
+   
     <div className="contact-page-container">
       {/* Hero Banner Section */}
       <div className="contact-hero">
@@ -151,6 +161,7 @@ const Contact = () => {
         ></iframe>
       </div>
     </div>
+     </>
   );
 };
 

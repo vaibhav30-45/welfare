@@ -10,6 +10,7 @@ import program3 from "../assets/skills2.jpeg";
 import program4 from "../assets/health.jpeg";
 import program5 from "../assets/env1.jpeg";
 import program6 from "../assets/skills.jpeg";
+import SEO from "../Components/SEO";
 import { useState, useEffect } from "react";
 
 const programs = [
@@ -91,6 +92,13 @@ const Programs = () => {
           );
   return (
     <>
+    <SEO
+title="Programs | Sahyog Welfare Foundation"
+description="Explore our education, healthcare and community development programs."
+keywords="NGO programs, education, health"
+image="/logo.png"
+url="https://www.sahyogfoundation.org/programs"
+/>
       <section className="program-banner">
         <img src={banner} alt="" />
 

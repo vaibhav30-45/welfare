@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom'
 import '../Pages/style/Blog.css';
+import SEO from "../Components/SEO";
 
 // 1. Blog Banner Component
 const BlogBanner = () => {
@@ -130,6 +131,15 @@ const currentBlogs = blogData.slice(
   
 
   return (
+    <>
+    <SEO
+title="Blogs | Sahyog Welfare Foundation"
+description="Read our latest blogs and inspiring stories."
+keywords="NGO Blog, Articles"
+image="/logo.png"
+url="https://www.sahyogfoundation.org/blogs"
+/>
+    
     <div className="blog-page-wrapper">
       <BlogBanner />
       
@@ -155,6 +165,7 @@ const currentBlogs = blogData.slice(
 />
       </div>
     </div>
+    </>
   );
 };
 

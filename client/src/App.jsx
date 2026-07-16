@@ -22,9 +22,16 @@ import EventEdit from "./Admin/AdminEvents/EventEdit";
 import GalleryList from "./Admin/GalleryAdmin/GalleryList";
 import AddGallery from "./Admin/GalleryAdmin/AddGallery";
 import EditGallery from "./Admin/GalleryAdmin/EditGallery";
+import DonationDetails from "./Admin/Donations/DonationDetails";
+import DonationList from "./Admin/Donations/DonationList";
 import ProgramDetail from "./Pages/ProgramDetails";
 import EventDetail from "./Pages/EventDetail";
 import ScrollToTop from "./ScrollToTop";
+import BlogList from "./Admin/Blogs/BlogList";
+import AddBlog from "./Admin/Blogs/AddBlog";
+import EditBlog from "./Admin/Blogs/EditBlog";
+import ContactList from "./Admin/Contact/ContactList";
+import ContactDetails from "./Admin/Contact/ContactDetails";
 
 
 function App() {
@@ -73,6 +80,16 @@ element={<AddGallery />}
 path="gallery/edit/:id"
 element={<EditGallery />}
 />
+<Route path="donations" element={<DonationList />} />
+<Route path="donations/:id" element={<DonationDetails />} />
+<Route path="blogs" element={<BlogList />} />
+
+<Route path="blogs/add" element={<AddBlog />} />
+
+<Route path="blogs/edit/:id" element={<EditBlog />} />
+<Route path="contact" element={<ContactList />} />
+
+<Route path="contact/:id" element={<ContactDetails />} />
 </Route>
 
       <Route element={<Layout />}>
