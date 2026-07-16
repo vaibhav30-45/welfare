@@ -10,9 +10,10 @@ import {
   FaDonate,
   FaCog,
   FaSignOutAlt,
-  FaBars
+  FaBars,
+  FaBlog,
+  FaEnvelope
 } from "react-icons/fa";
-
 import { useState } from "react";
 
 const Sidebar = () => {
@@ -121,7 +122,21 @@ Events
   </NavLink>
 
 </li>
+<li>
 
+  <NavLink to="/admin/blogs">
+
+    <FaBlog />
+
+    <span>
+
+      Blogs
+
+    </span>
+
+  </NavLink>
+
+</li>
 <li>
 
   <NavLink to="/admin/donations">
@@ -135,6 +150,21 @@ Events
     </span>
 
   </NavLink>
+
+</li>
+<li>
+
+<NavLink to="/admin/contact">
+
+<FaEnvelope />
+
+<span>
+
+Contact
+
+</span>
+
+</NavLink>
 
 </li>
 

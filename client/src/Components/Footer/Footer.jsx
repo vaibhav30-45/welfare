@@ -17,7 +17,7 @@ const Footer = () => {
   const navigate = useNavigate();
 
   const handleCategoryClick = (categoryName) => {
-    // Isse hum state pass kar rahe hain jo Programs page read karega
+   
     navigate("/programs", { state: { category: categoryName } });
   };
   return (
